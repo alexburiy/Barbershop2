@@ -2,21 +2,26 @@
 <head>
 	<meta charset="utf-8">
 	<title>Барбершоп "Бородинский"</title>
+	<link href='../css/style.css' rel="stylesheet" type="text/css">
 </head>
-<body>
-	<header class="page-header container">
+<body class="inner-page no-js">
+	<header class="page-header">
 		<a class="page-header__logo">
-			<img class="page-header__logo-image" src="img/logotype-mobile.svg" width="226" height="30" alt="Barbershop">
+			<picture>
+				<source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+					<source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+						<img class="page-header__logo-image" src="img/logotype-mobile.svg" width="226" height="30" alt="Barbershop">
+					</picture>
 		</a>
 		<nav class="main-nav">
-			<button class="main-nav__toggle" type="button">Открыть меню</button>
+			<button class="main-nav__toggle visually-hidden" type="button">Открыть меню</button>
 			<div class="main-nav__wrapper">
 				<ul class="main-nav__list site-list">
 					<li class="site-list__item site-list__item--active">
 						<a>Главная</a>
 					</li>
 					<li class="site-list__item">
-						<a href="photo.html">Наши работы</a>
+						<a href="photos.html">Наши работы</a>
 					</li>
 					<li class="site-list__item">
 						<a href="form.html">Записаться</a>
@@ -38,9 +43,11 @@
 	</header>
 
 	<main class="page-main container">
-		<h2 class="booking__title">Записаться на стрижку</h2>
-		<a class="button photos__to-main-btn" href="index.html">На главную</a>
-		<form class="booking" method="post" action="https://echo.htmlacademy.ru">
+		<form class="booking booking__wrapper" method="post" action="https://echo.htmlacademy.ru">
+			<div class="title__block">
+				<h2 class="booking__title">Запись на стрижку</h2>
+				<a class="button photos__to-main-btn" href="index.html">На главную</a>
+			</div>
 			<fieldset class="booking__information">
 				<div class="booking__name">
 					<p class="booking__name--name">
@@ -129,7 +136,7 @@
 		</form>
 	</main>
 
-	<footer class="page-footer container">
+	<footer class="page-footer">
 		<div class="page-footer__wrapper">
 			<div class="page-footer__contacts contacts">
 				<b class="contacts__title">Барбершоп Бородинский</b>

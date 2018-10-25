@@ -1,0 +1,36 @@
+@font-face {
+  font-weight: normal;
+  font-family: "PT Sans Narrow";
+}
+@font-face {
+  font-weight: bold;
+  font-family: "PT Sans Narrow";
+}
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "PT Sans Narrow", sans-serif;
+  color: black;
+  font-style: normal;
+  background-color: #f8f5f2;
+}
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}

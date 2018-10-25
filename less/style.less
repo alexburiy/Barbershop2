@@ -1,0 +1,54 @@
+@import "variables";
+
+@font-face {
+  font-family: "PT Sans Narrow";
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Sans Narrow";
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "PT Sans Narrow", sans-serif;
+  color: black;
+  font-style: normal;
+  background-color: @bg-lightgrey;
+}
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+@import "mixins";
+@import "blocks/main-nav";
+@import "blocks/page-header";
+@import "blocks/stats";
+@import "blocks/advantages";
+@import "blocks/news";
+@import "blocks/reviews";
+@import "blocks/page-footer";
+@import "blocks/form";
+@import "blocks/works";
+@import "blocks/price-list";

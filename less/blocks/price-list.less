@@ -1,0 +1,57 @@
+.price__wrapper {
+  width: 280px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+.price__number {
+  display: none;
+}
+.price__service,
+.price__description {
+  display: block;
+}
+.price__cost {
+  vertical-align: text-top;
+}
+.price__list {
+  margin-bottom: 30px;
+}
+.price__sale {
+  display: flex;
+  border: 1px solid grey;
+  margin-bottom: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .price__wrapper {
+    width: 640px;
+    padding-left: 64px;
+    padding-right: 64px;
+    margin: 0 auto;
+  }
+  .price__number {
+    display: inline-block;
+  }
+  .price__service,
+  .price__description {
+    display: inline-block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .price__wrapper {
+    width: 960px;
+    padding-left: 120px;
+    padding-right: 120px;
+    margin: 0 auto;
+  }
+  .price__sale {
+    display: block;
+    width: 300px;
+  }
+  .price__container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
