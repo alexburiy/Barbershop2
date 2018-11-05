@@ -38,12 +38,23 @@
   .inner-page .page-header__logo {
     height: 212px;
     position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      height: 40px;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-image: url("../img/bg-layer.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 40px;
+}
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header__logo {
-    height: 646px;
+    height: 546px;
     background-size: cover;
   }
   .inner-page .page-header__logo {
