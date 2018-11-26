@@ -2,8 +2,9 @@
 <head>
 	<meta charset="utf-8">
 	<title>Барбершоп "Бородинский"</title>
-	<link href='../css/style.css' rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="preload" href="fonts/pt-sans-narrow-v8-latin_cyrillic-regular.woff2" as="font">
+  <link rel="preload" href="fonts/pt-sans-narrow-v8-latin_cyrillic-700.woff2" as="font">
+	<link rel="stylesheet" href='../css/style.css' type="text/css">
 </head>
 <body class="inner-page no-js">
 	<header class="page-header">
@@ -62,30 +63,30 @@
 				<div class="booking__name">
 					<p class="booking__name--name">
 						<label for="user-first-name"></label>
-						<input id="user-first-name" type="text" name="name" placeholder="Имя" value="">
+						<input class="form form__first-name" id="user-first-name" type="text" name="name" placeholder="Имя" value="">
 					</p>
 					<p class="booking__name--second-name">
 						<label for="user-second-name"></label>
-						<input id="user-second-name" type="text" name="second-name" placeholder="Фамилия" value="">
+						<input class="form form__second-name" id="user-second-name" type="text" name="second-name" placeholder="Фамилия" value="">
 					</p>
 					<p class="booking__name--third-name">
 						<label for="user-third-name"></label>
-						<input id="user-third-name" type="text" name="third-name" placeholder="Отчество" value="">
+						<input class="form form__third-name" id="user-third-name" type="text" name="third-name" placeholder="Отчество" value="">
 					</p>
 				</div>
 				<div class="booking__contacts">
 					<p class="booking__phone">
 						<label for="user-phone"></label>
-						<input id="user-phone" type="tel" name="phone" placeholder="Контактный телефон" value="">
+						<input class="form form__phone" id="user-phone" type="tel" name="phone" placeholder="Контактный телефон" value="">
 					</p>
 					<p class="booking__mail">
 						<label for="user-mail"></label>
-						<input id="user-mail" type="email" name="e-mail" placeholder="Контактный e-mail" value="">
+						<input class="form form__mail" id="user-mail" type="email" name="e-mail" placeholder="Контактный e-mail" value="">
 					</p>
 				</div>
 				<p class="booking__comment">
 					<label for="user-comment"></label>
-					<input id="user-comment" type="text" name="comment" placeholder="Доп. информация для мастера" value="">
+					<input class="form form__comment" id="user-comment" type="text" name="comment" placeholder="Доп. информация для мастера" value="">
 				</p>
 			</fieldset>
 			<fieldset class="booking__beard-type beard-type">
@@ -138,7 +139,7 @@
 					</li>
 					<li class="extra__item">
 						<input id="bald-polish" class="visually-hidden booking__input booking__input--checkbox" type="checkbox" name="bald-polish" checked>
-						<label for="bald-polish">Отполировать виски</label>
+						<label for="bald-polish">Отполировать лысину</label>
 					</li>
 				</ul>
 			</fieldset>

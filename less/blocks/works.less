@@ -4,7 +4,22 @@
   padding-right: 20px;
   margin: 0 auto;
   margin-bottom: 60px;
+  position: relative;
+  &::after {
+    position: absolute;
+    bottom: -74px;
+    left: 0;
+
+    content: "";
+    transform: rotate(180deg);
+
+    border: 160px solid transparent;
+    border-top-width: 0;
+    border-bottom-width: 34px;
+    border-bottom-color: @bg-lightgrey;
+  }
 }
+.photos {}
 .service_list {
   display: flex;
   .reset-list();
@@ -19,25 +34,6 @@
 .photos__item {
   border: 1px solid grey;
   margin-bottom: 40px;
-}
-.photos {
-  width: 320px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
-  &::after {
-    position: absolute;
-    bottom: -74px;
-    left: 0;
-
-    content: "";
-    transform: rotate(180deg);
-
-    border: 160px solid transparent;
-    border-top-width: 0;
-    border-bottom-width: 34px;
-    border-bottom-color: @bg-lightgrey;
-  }
 }
 .photos__title {
   font-size: 30px;
@@ -139,29 +135,14 @@
 
 
 @media (min-width: @tablet-width) {
-  .photos {
+  .photos__wrapper{
     width: 640px;
     padding-left: 64px;
     padding-right: 64px;
-    margin: 0 auto;
     position: relative;
     &::after {
-      position: absolute;
-      bottom: -73px;
-      left: 0;
-
-      content: "";
-      transform: rotate(180deg);
-
-      border: 380px solid transparent;
-      border-top-width: 0;
-      border-bottom-width: 34px;
-      border-bottom-color: @bg-lightgrey;
+      display: none;
     }
-  }
-  .photos__wrapper{
-    width: 640px;
-    margin: 0 auto;
   }
   .photos__title {
     text-align: left;
@@ -174,7 +155,7 @@
     display: inline-block;
     position: absolute;
     top: 0px;
-    right: 44px;
+    right: 64px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 30px;
@@ -198,7 +179,7 @@
   }
 }
 @media (min-width: @desktop-width) {
-  .photos {
+  .photos__wrapper {
     width: 960px;
     padding-left: 120px;
     padding-right: 120px;
@@ -206,10 +187,6 @@
     &::after {
       display: none;
     }
-  }
-  .photos__wrapper {
-    width: 960px;
-    margin: 0 auto;
   }
   .photos__item-big .photos__block {
     width: 310px;
@@ -222,7 +199,7 @@
     margin-bottom: 80px;
   }
   .photos__to-main-btn {
-    right: 100px;
+    right: 120px;
   }
   .photos__list {
     display: flex;
@@ -231,14 +208,14 @@
   }
   .photos__best {
     left: 805px;
-    bottom: 300px;
+    bottom: 400px;
     &::after {
       display: none;
     }
     &::before {
         position: absolute;
         bottom: 0px;
-        left: -8px;
+        left: -7px;
 
         content: "";
 

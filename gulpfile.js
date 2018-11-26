@@ -51,7 +51,7 @@ gulp.task("html", function() {       /* название таска*/
       collapseWhitespace: true,
       ignoreCustomFragments: [ /<br>\s/gi ]  /*Не убираем пробел после <br> */
     }))
-    .pipe(gulp.dest("./build"))      /* куда кидает файлы */
+    .pipe(gulp.dest("./build/html"))      /* куда кидает файлы */
     .pipe(server.stream());          /* команда перезагрузки сервера в браузере */
 });
 
@@ -120,7 +120,8 @@ gulp.task('serve', function() {
   });
 
   gulp.watch('less/**/*.less', ["style"]);
-  gulp.watch('html/*.html').on('change', server.reload);
+  gulp.watch('html/*.html')
+  .on('change', server.reload);
   gulp.watch("script/*.js", ["scripts"]);
   gulp.watch("img/*.{png,jpg,svg,webp}", ["images-watch"]);
 });
